@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Filmes Favoritos</title>
+  </head>
+  <body>
+    <header>
+      <p>Filmes Favoritos</p>
+    </header>
+    <section id="button-container">
+      <div>
+        <button onclick="openModal('create-movie')">Criar novo filme</button>
+        <button onclick="openModal('create-genre')">Criar novo gênero</button>
+      </div>
+    </section>
+    <section id="movie-container">
+
+    </section>
+    <section id="create-movie" class="modal">
+      <div class="modal-container">
+        <div id="iconExitContainer">
+            <a id="iconExit" href='javascript:closeModal("create-movie")'>X</a>
+        </div>            
+        <div class="container container-create">
+          <div>
+            <label for="movie-name">Nome:</label>
+            <input name="movie-name" id="movie-name" />
+          </div>
+          <div>
+            <label for="movie-genre">Gênero(s):</label>
+            <select name="movie-genre" id="movie-genre" multiple></select>
+          </div>
+          <div>
+            <label for="movie-year">Ano de lançamento:</label>
+            <input name="movie-year" id="movie-year" />
+          </div>
+          <div>
+            <label for="movie-image">Link de Imagem:</label>
+            <input name="movie-image" id="movie-image" />
+          </div>
+          <button onclick="createNewMovie()">Criar</button>
+        </div>        
+      <div>
+    </section>
+    <section id="create-genre" class="modal">
+      <div class="modal-container">
+        <div id="iconExitContainer">
+            <a id="iconExit" href='javascript:closeModal("create-genre")'>X</a>
+        </div>            
+        <div class="container container-create">
+          <div>
+            <label for="genre-name">Nome do gênero:</label>
+            <input name="genre-name" id="genre-name" />
+          </div>
+          <button onclick="createNewGenre()">Criar</button>
+        </div>        
+      <div>
+    </section>
+    <section id="movie-modal" class="modal">
+    </section>
+    <footer>      
+      <div>
+        <p id="all-rights-text"></p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
